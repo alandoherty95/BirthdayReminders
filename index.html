@@ -46,7 +46,7 @@
             if (birthdayToday.length > 0) {
                 let message = "<h3>Today's Birthdays:</h3><ul>";
                 birthdayToday.forEach(person => {
-                    message += `<li class="birthday">${person.name}</li>`;
+                    message += `<li class="birthday">Today is ${person.name}'s birthday</li>`;
                 });
                 message += "</ul>";
                 birthdayMessage.innerHTML = message;
