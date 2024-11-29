@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Reminders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .message {
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .birthday {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Birthday Reminder</h1>
+    <div id="birthdayMessage"></div>
+
+    <script>
+        // List of family and friends' birthdays (MM-DD format)
+        const birthdays = [
+            { name: "Alan", birthday: "06-22" },
+            { name: "Mary", birthday: "10-19" },
+            { name: "Mary", birthday: "06-24" },
+            { name: "Bob", birthday: "11-29" }
+        ];
+
+        // Function to check if today is anyone's birthday
+        function checkBirthdays() {
+            const today = new Date();
+            const todayDate = `${today.getMonth() + 1}-${today.getDate()}`; // MM-DD format
+
+            // Find people who have birthdays today
+            const birthdayToday = birthdays.filter(person => person.birthday === todayDate);
+
+            const birthdayMessage = document.getElementById('birthdayMessage');
+
+            if (birthdayToday.length > 0) {
+                let message = "<h3>Today's Birthdays:</h3><ul>";
+                birthdayToday.forEach(person => {
+                    message += `<li class="birthday">${person.name}</li>`;
+                });
+                message += "</ul>";
+                birthdayMessage.innerHTML = message;
+            } else {
+                birthdayMessage.innerHTML = "<p>No birthdays today!</p>";
+            }
+        }
+
+        // Run the check when the page loads
+        checkBirthdays();
+    </script>
+</body>
+</html>
