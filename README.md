@@ -1,5 +1,10 @@
 # BirthdayReminders
 
+Open a preview using:
+
+python -m http.server 8000
+
+
 The git add, git commit, and git push commands are fundamental to managing changes in Git, allowing you to stage local changes, and push remote repository updates.
 
 **git add**
