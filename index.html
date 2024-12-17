@@ -1,69 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Reminders</title>
-    <style>
-        body {
-            font-family: "Gill Sans", sans-serif;
-            padding: 20px;
-        }
-        .message {
-            background-color: #f2f2f2;
-            border: 2px solid #008B8B;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        .birthday {
-            color: #008B8B;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Reminders</title>
+  <!-- Link to external CSS file for styling -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Main container for the content -->
+  <div class="container">
+    <!-- Page Header -->
     <h1>Birthday Reminders</h1>
-    <div id="birthdayMessage"></div>
+    
+    <!-- Display a cake image -->
+    <img src="cake.png" alt="Birthday Cake" class="cake-image">
 
-    <script>
-        // List of family and friends' birthdays (MM-DD format)
-        const birthdays = [
-            { name: "Alan Doherty", birthday: "06-22" },
-            { name: "Mary Doherty", birthday: "10-19" },
-            { name: "Mark Doherty", birthday: "06-24" },
-            { name: "Denise Lenihan", birthday: "11-30" },
-            { name: "Bryan Doherty", birthday: "06-22" },
-            { name: "Philip Doherty", birthday: "09-06" },
-            { name: "Gladys Doherty", birthday: "06-20" }
-        ];
+    <!-- Section to display today's birthdays -->
+    <div id="today-birthday" class="birthday-section">
+      <h2>Today's Birthday</h2>
+      <p id="birthday-message">Loading...</p>
+    </div>
 
-        // Function to check if today is anyone's birthday
-        function checkBirthdays() {
-            const today = new Date();
-            const todayDate = `${today.getMonth() + 1}-${today.getDate()}`; // MM-DD format
+    <!-- Section to display the next upcoming birthday -->
+    <div id="next-birthday" class="birthday-section">
+      <h2>Upcoming Birthdays</h2>
+      <p id="next-birthday-message">Loading...</p>
+    </div>
+  </div>
 
-            // Find people who have birthdays today
-            const birthdayToday = birthdays.filter(person => person.birthday === todayDate);
-
-            const birthdayMessage = document.getElementById('birthdayMessage');
-
-            /* Format today's date
-            const formattedDate = today.toLocaleDateString();
-            console.log("Today's date is:", formattedDate); */
-
-            if (birthdayToday.length > 0) {
-                let message = "<h3>Today's Birthdays:</h3><ul>";
-                birthdayToday.forEach(person => {
-                    message += `<li class="birthday">Today is ${person.name}'s birthday</li>`;
-                });
-                message += "</ul>";
-                birthdayMessage.innerHTML = message;
-            } else {
-                birthdayMessage.innerHTML = "<p>No birthdays today!</p>";
-            }
-        }
-
-        // Run the check when the page loads
-        checkBirthdays();
-    </script>
+  <!-- Link to external JavaScript file for functionality -->
+  <script src="script.js"></script>
 </body>
 </html>

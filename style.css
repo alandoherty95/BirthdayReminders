@@ -1,0 +1,49 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style the body with a light background and center alignment */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #734f96; /* Dark lavender theme */
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Main container to center and style the content */
+  .container {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #E6E6FA; /* Lavender border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+  
+  /* Header styling */
+  h1 {
+    color: #734f96; /* Dark Lavender */
+    margin-bottom: 10px;
+  }
+  
+  /* Section for birthdays */
+  .birthday-section {
+    margin-top: 20px;
+  }
+  
+  /* Style the cake image */
+  .cake-image {
+    width: 150px;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  /* Paragraph styling for birthday messages */
+  p {
+    font-size: 18px;
+    color: #555;
+  }
