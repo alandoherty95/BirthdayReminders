@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple webpage to display birthday reminders and upcoming birthdays.">
   <title>Birthday Reminders</title>
   <!-- Link to external CSS file for styling -->
   <link rel="stylesheet" href="style.css">
@@ -14,22 +15,22 @@
     <h1>Birthday Reminders</h1>
     
     <!-- Display a cake image -->
-    <img src="cake.png" alt="Birthday Cake" class="cake-image">
+    <img src="cake.png" alt="Birthday Cake" class="cake-image" onerror="this.src='fallback.png';">
 
     <!-- Section to display today's birthdays -->
-    <div id="today-birthday" class="birthday-section">
-      <h2>Today's Birthday</h2>
-      <p id="birthday-message">Loading...</p>
-    </div>
+    <section id="today-birthday" class="birthday-section" aria-labelledby="today-birthday-heading">
+      <h2 id="today-birthday-heading">Today's Birthday</h2>
+      <p id="birthday-message" aria-live="polite">Loading...</p>
+    </section>
 
     <!-- Section to display the next upcoming birthday -->
-    <div id="next-birthday" class="birthday-section">
-      <h2>Upcoming Birthdays</h2>
-      <p id="next-birthday-message">Loading...</p>
-    </div>
+    <section id="next-birthday" class="birthday-section" aria-labelledby="next-birthday-heading">
+      <h2 id="next-birthday-heading">Upcoming Birthdays</h2>
+      <p id="next-birthday-message" aria-live="polite">Loading...</p>
+    </section>
   </div>
 
   <!-- Link to external JavaScript file for functionality -->
-  <script src="script.js"></script>
+  <script src="script.js" type="module"></script>
 </body>
 </html>
