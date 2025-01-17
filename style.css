@@ -1,25 +1,34 @@
 /* Root Variables for Theming */
 :root {
-  --primary-color: #734f96; /* Dark Lavender */
-  --secondary-color: #E6E6FA; /* Lavender */
+  --primary-color: #734f96;
+  /* Dark Lavender */
+  --secondary-color: #E6E6FA;
+  /* Lavender */
   --text-color: #333;
   --background-color: #fff;
+  --accent-color: #ffcccb;
+  /* Light Coral for accents */
 }
 
-/* Reset Styles */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: var(--primary-color);
   color: var(--text-color);
   text-align: center;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
+/* Main Container Styling */
 .container {
   margin: 20px auto;
   max-width: 600px;
@@ -30,36 +39,71 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
+/* Header Section */
+.page-header h1 {
+  color: var(--accent-color);
+  font-size: 2em;
+  margin-bottom: 15px;
 }
 
-.birthday-section {
-  margin-top: 20px;
+/* Image Section */
+.image-container {
+  margin: 20px auto;
 }
 
 .cake-image {
   width: 150px;
-  margin: 10px auto;
-  display: block;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
-p {
-  font-size: 18px;
+.cake-image:hover {
+  transform: scale(1.1);
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+/* Birthday Sections */
+.birthday-section {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .birthday-section:hover {
-  background-color: #f9f9f9;
+  background-color: #fff;
   transition: background-color 0.3s ease-in-out;
 }
 
+/* Paragraphs */
+p {
+  font-size: 1em;
+  margin: 10px 0;
+  color: var(--text-color);
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
   .cake-image {
     width: 100px;
   }
 
-  h1 {
+  .page-header h1 {
     font-size: 1.5em;
+  }
+
+  p {
+    font-size: 0.9em;
   }
 }

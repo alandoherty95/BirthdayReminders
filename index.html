@@ -3,29 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A simple webpage to display birthday reminders and upcoming birthdays.">
   <title>Birthday Reminders</title>
   <!-- Link to external CSS file for styling -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Main container for the content -->
+  <!-- Main container for the page content -->
   <div class="container">
     <!-- Page Header -->
-    <h1>Birthday Reminders</h1>
-    
-    <!-- Display a cake image -->
-    <img src="cake.png" alt="Birthday Cake" class="cake-image" onerror="this.src='fallback.png';">
+    <header class="page-header">
+      <h1>Birthday Reminders</h1>
+    </header>
 
-    <!-- Section to display today's birthdays -->
+    <!-- Image section for decoration -->
+    <figure class="image-container">
+      <img src="cake.png" alt="A colorful birthday cake" class="cake-image" onerror="this.src='fallback.png';">
+    </figure>
+
+    <!-- Section for today's birthdays -->
     <section id="today-birthday" class="birthday-section" aria-labelledby="today-birthday-heading">
-      <h2 id="today-birthday-heading">Today's Birthday</h2>
+      <h2 id="today-birthday-heading">🎉 Today's Birthdays</h2>
       <p id="birthday-message" aria-live="polite">Loading...</p>
     </section>
 
-    <!-- Section to display the next upcoming birthday -->
+    <!-- Section for upcoming birthdays -->
     <section id="next-birthday" class="birthday-section" aria-labelledby="next-birthday-heading">
-      <h2 id="next-birthday-heading">Upcoming Birthdays</h2>
+      <h2 id="next-birthday-heading">📅 Upcoming Birthdays</h2>
       <p id="next-birthday-message" aria-live="polite">Loading...</p>
     </section>
   </div>
