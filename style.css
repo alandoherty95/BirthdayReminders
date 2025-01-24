@@ -1,13 +1,10 @@
 /* Root Variables for Theming */
 :root {
-  --primary-color: #734f96;
-  /* Dark Lavender */
-  --secondary-color: #E6E6FA;
-  /* Lavender */
+  --primary-color: #e1a7a3;
+  --secondary-color: #c46e64;
   --text-color: #333;
   --background-color: #fff;
-  --accent-color: #ffcccb;
-  /* Light Coral for accents */
+  --accent-color: #e48c64;
 }
 
 /* Global Reset */
